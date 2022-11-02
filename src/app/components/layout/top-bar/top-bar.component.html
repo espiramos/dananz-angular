@@ -1,0 +1,15 @@
+<nav>
+    <div class="brand">
+        <a href="#top"><img src="assets/brand.png" alt="Danaz logo"></a>
+    </div>
+    <ul (click)="toggleSideBar()" [class]="sideBar ? 'show-sidebar' : 'hide-sidebar'" class="nav-links">
+        <li class="nav-link"><a href="#top">Home</a></li>
+        <li class="nav-link"><a href="#details">About Us</a></li>
+        <li class="nav-link"><a href="#details">Services</a></li>
+        <li class="nav-link"><a href="#details">Our Teams</a></li>
+        <li><a href="#contact-us" class="btn primary-btn">Contact Us</a></li>
+    </ul>
+    <button class="burger" (click)="toggleSideBar()">
+        <img src="assets/menu.svg" alt="menu icon">
+    </button>
+</nav>
