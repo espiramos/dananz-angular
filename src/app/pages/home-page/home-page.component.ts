@@ -1,4 +1,4 @@
-import { Component, Renderer2, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import * as AOS from 'aos';
 
 @Component({
@@ -6,23 +6,15 @@ import * as AOS from 'aos';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
-  constructor(private renderer2: Renderer2) { }
+export class HomePageComponent implements OnInit {
 
-  private unlistener!: () => void;
   contentLoaded: Boolean = false;
-  hasLoad() {
-    this.contentLoaded = true
+  @HostListener('document:DOMContentLoaded', ['$event'])
+  handleKeyDown(event: Event) {
+    this.contentLoaded = true;
   }
   ngOnInit() {
     AOS.init();
-    this.unlistener = this.renderer2.listen("document", "DOMContentLoaded", () => {
-      this.contentLoaded = true;
-    });
-  }
-
-  ngOnDestroy() {
-    this.unlistener();
   }
 
 }
