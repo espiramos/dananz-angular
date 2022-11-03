@@ -9,7 +9,7 @@ import * as AOS from 'aos';
 export class HomePageComponent implements OnInit {
 
   contentLoaded: Boolean = false;
-  @HostListener('window:load', ['$event'])
+  @HostListener('document:DOMContentLoaded', ['$event'])
   handleKeyDown(event: Event) {
     this.contentLoaded = true;
   }
