@@ -1,14 +1,14 @@
 <section id="hero" class="container">
-    <div data-aos="zoom-out" data-aos-duration="800" data-aos-once="true" data-aos-easing="ease-in-sine" class="hero-texts">
+    <div data-aos="zoom-out" data-aos-duration="800" data-aos-once="true" data-aos-easing="ease-in-sine"
+        class="hero-texts">
         <h1>Minimalist Room</h1>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when
             looking at its layout.</p>
     </div>
     <div class="hero-image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '80vw', height: '40vh' }">
-        </ngx-skeleton-loader>
-        <img data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/minimalist-room.png" alt="minimalist room image">
+        <app-ui-image [animationType]="'fade-up'" [animationDuration]="600" [skHeight]="'40vh'" [skWidth]="'80vw'"
+            [link]="'assets/minimalist-room.png'" alt="'minimalist room image'">
+        </app-ui-image>
     </div>
 </section>
 <section id="details" class="container">
@@ -40,43 +40,31 @@
 </section>
 <section id="gallery" class="container">
     <div>
-        <img data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/gallery-1.png" alt="gallery image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '100%', height: '100%', 'object-fit': 'cover', 'aspect-ratio': '1/1' }">
-        </ngx-skeleton-loader>
+        <app-ui-image [animationType]="'fade-up'" [animationDuration]="'600'" [skHeight]="'100%'" [skWidth]="'100%'"
+            [link]="'assets/gallery-1.png'" alt="'gallery image'">
+        </app-ui-image>
+    </div>
+    <div>
+        <app-ui-image [animationType]="'fade-up'" [animationDelay]="'600'" [animationDuration]="'600'"
+            [skHeight]="'100%'" [skWidth]="'100%'" [link]="'assets/gallery-2.png'" alt="'gallery image'">
+        </app-ui-image>
 
     </div>
     <div>
-        <img data-aos="fade-up" data-aos-delay="600" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/gallery-2.png" alt="gallery image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '100%', height: '100%', 'object-fit': 'cover', 'aspect-ratio': '1/1' }">
-        </ngx-skeleton-loader>
-
+        <app-ui-image [animationType]="'fade-up'" [animationDelay]="'900'" [animationDuration]="'600'"
+            [skHeight]="'100%'" [skWidth]="'100%'" [link]="'assets/gallery-3.png'" alt="'gallery image'">
+        </app-ui-image>
     </div>
     <div>
-        <img data-aos="fade-up" data-aos-delay="900" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/gallery-3.png" alt="gallery image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '100%', height: '100%', 'object-fit': 'cover', 'aspect-ratio': '2/1' }">
-        </ngx-skeleton-loader>
-
+        <app-ui-image [animationType]="'fade-up'" [animationDelay]="'1200'" [animationDuration]="'600'"
+            [skHeight]="'100%'" [skWidth]="'100%'" [link]="'assets/gallery-4.png'" alt="'gallery image'">
+        </app-ui-image>
     </div>
     <div>
-        <img data-aos="fade-up" data-aos-delay="1200" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/gallery-4.png" alt="gallery image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '100%', height: '100%', 'object-fit': 'cover', 'aspect-ratio': '1/1' }">
-        </ngx-skeleton-loader>
-
+        <app-ui-image [animationType]="'fade-up'" [animationDelay]="'1500'" [animationDuration]="'600'"
+            [skHeight]="'100%'" [skWidth]="'100%'" [link]="'assets/gallery-5.png'" alt="'gallery image'">
+        </app-ui-image>
     </div>
-    <div>
-        <img data-aos="fade-up" data-aos-delay="1500" data-aos-duration="600" data-aos-once="true" data-aos-easing="ease-in-sine" *ngIf="contentLoaded" src="assets/gallery-5.png" alt="gallery image">
-        <ngx-skeleton-loader *ngIf="!contentLoaded" appearance="circle"
-            [theme]="{ 'border-radius': '0px',  width: '100%', height: '100%', 'object-fit': 'cover', 'aspect-ratio': '1/1' }">
-        </ngx-skeleton-loader>
-
-    </div>
-
-
-
 
 
 </section>

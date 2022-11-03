@@ -1,0 +1,6 @@
+<ngx-skeleton-loader *ngIf="!loaded" appearance="circle"
+    [theme]="{ 'border-radius': '0px',  width: skWidth, height: skHeight, 'object-fit': 'cover' }">
+</ngx-skeleton-loader>
+<img data-aos="animationType" data-aos-delay="animationDelay || 0" data-aos-duration="animationDuration || 0"
+    data-aos-once="animationRepeat" data-aos-easing="animationEasing" (load)="hasLoad($event)"
+    [class]="loaded ? 'show-image' : 'hide-image'" [src]="link" [alt]="alt">
